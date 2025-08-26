@@ -51,6 +51,22 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(79, 209, 197, 0.1), 0 4px 6px -2px rgba(79, 209, 197, 0.05);
         }
+        /* NEW: Custom Scrollbar for Project Section */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #2d3748;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4fd1c5;
+  border-radius: 10px;
+  border: 2px solid #2d3748;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #a0f0ed;
+}
     </style>
 </head>
 <body class="leading-normal tracking-normal">
@@ -115,7 +131,7 @@
               
                 <section class="bg-gray-800 p-6 rounded-lg shadow-lg fade-in-section">
                     <h2 class="text-2xl font-bold text-white section-title"><i class="fas fa-project-diagram mr-3"></i>Projects</h2>
-                    <div class="space-y-6">
+                    <div class="space-y-6 h-96 overflow-y-auto pr-4 custom-scrollbar">
                      
                         <div class="project-card bg-gray-900 p-4 rounded-lg">
                             <h3 class="text-xl font-bold text-teal-300">Laptop Price Prediction</h3>
@@ -187,10 +203,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
